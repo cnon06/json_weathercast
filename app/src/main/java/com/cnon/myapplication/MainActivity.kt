@@ -148,36 +148,10 @@ class MainActivity : AppCompatActivity() {
                     var imgFileName = resources.getIdentifier("a"+icon,"drawable",packageName)
                     binding!!.imageView.setImageResource(imgFileName)
 
-
-
-                    val hashMap:HashMap<String,String> = HashMap<String,String>() //define empty hashmap
-                    hashMap.put("Izmir","311046")
-                    hashMap.put("Tokyo","1850147")
-                    hashMap.put("Sydney","2147714")
-                    hashMap.put("Miami","4164138")
-                    hashMap.put("Los Angeles","5344994")
-                    hashMap.put("London","2643743")
-                    hashMap.put("Berlin","2885657")
-                    hashMap.put("Dubai","292223")
-                    hashMap.put("Mumbai","1275339")
-
-                    hashMap.keys
-                    Log.e("Hashmap keys",hashMap.keys.toString())
-                    var cityList = hashMap.keys.toTypedArray()
-
-
                     if(icon.last() =='d')
                     {
-
-
                       binding!!.backGround.background = getDrawable(drawable.day)
                         binding!!.spinner.setPopupBackgroundResource(R.color.dark_yellow)
-
-
-                       // binding!!.spinner.adapter = ArrayAdapter<String>(applicationContext,R.layout.spinnerlistitem,cityList )
-
-
-                        //tvSpinner.setBackgroundColor(getColor(R.color.dark_yellow))
 
                     }
                     else
@@ -185,17 +159,7 @@ class MainActivity : AppCompatActivity() {
                         binding!!.backGround.background = getDrawable(drawable.night)
                         binding!!.spinner.setPopupBackgroundResource(R.color.dark_blue)
 
-                    //    binding!!.spinner.adapter = ArrayAdapter<String>(applicationContext,R.layout.spinnerlistitem,cityList )
-                        //binding!!.spinner.background=getDrawable(drawable.night) //getColor(R.color.dark_yellow
-                        //tvSpinner.setBackgroundColor(getColor(R.color.dark_blue))
                     }
-
-
-
-
-
-
-
 
 
                 }
