@@ -3,31 +3,36 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backGround"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/day"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    >
 
     <TextView
-        android:id="@+id/Tarih"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="44dp"
+        android:id="@+id/tvTarih"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="96dp"
         android:text="Tarih"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="36sp"
+        android:textSize="24sp"
+
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tarih2"
+        android:id="@+id/tvTempt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="252dp"
         android:text="23"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="120sp"
         android:textStyle="bold"
@@ -37,12 +42,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tarih3"
+        android:id="@+id/şehir2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="136dp"
-        android:layout_marginTop="368dp"
+        android:layout_marginTop="40dp"
+        android:text="C°"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTempt"
+        app:layout_constraintTop_toTopOf="@+id/tvTempt" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="413dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="436dp"
         android:text="Cloudy"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -53,37 +71,23 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/w01d" />
 
-    <TextView
-        android:id="@+id/şehir2"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="C°"
-        android:textColor="@color/white"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tarih2"
-        app:layout_constraintTop_toTopOf="@+id/tarih2" />
 
-    <TextView
-        android:id="@+id/şehir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="56dp"
-        android:text="Şehir"
-        android:textColor="@color/white"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="48dp"
+        android:popupBackground="@color/dark_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTarih" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
